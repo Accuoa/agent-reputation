@@ -1,0 +1,21 @@
+
+> agent-reputation@0.1.0 benchmark
+> node benchmark/run.mjs
+
+[agent-reputation] running benchmark — 30 samples
+
+  parsing samples...    30/30 OK
+  scoring...            30/30 OK
+
+FIDELITY:
+  happy-path (15):  15/15 (100.0%)
+  edge-case (10):   10/10 (100.0%)
+  malformed (5):    5/5 errored cleanly (100.0%)
+
+  total:                30/30 (100.0%)
+
+NETWORK FOOTPRINT:
+  external calls:  0
+  audit log:       C:\Users\aiden\Documents\portfolio-scaffolds\agent-reputation\logs\network.jsonl
+
+STATUS: Strong band
