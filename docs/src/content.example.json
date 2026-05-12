@@ -1,42 +1,43 @@
 {
   "project": {
     "slug": "agent-reputation",
-    "name": "AgentReputation",
-    "statusBadge": "concept — no code yet",
+    "name": "agent-reputation",
+    "statusBadge": "alpha demo",
     "primaryCta": {
-      "label": "Read on GitHub",
-      "href": "https://github.com/Accuoa/agent-reputation"
+      "label": "Read the spec",
+      "href": "https://github.com/Accuoa/agent-reputation/blob/main/SPEC.md"
     }
   },
   "hero": {
-    "headline": "Placeholder — content lands when this idea ships."
+    "headline": "Vendor-neutral attestation format for agent reputation. Ed25519-signed, 100% verification fidelity."
   },
   "problem": {
-    "body": "This page is a placeholder. Real content arrives as part of this project’s launch in the next two weeks."
+    "body": "A2A defines how agents talk. It doesn't define how they come to trust each other. Today every framework has its own ad-hoc reputation model, or none. Agents can claim anything about themselves; verifiers have no portable way to check claims from other parties."
   },
   "proposal": {
-    "body": "When this project ships, this section describes the proposal — what this primitive is and isn’t, in plain language."
+    "body": "agent-reputation is a vendor-neutral attestation format: any agent can sign a claim about another agent's competence, and anyone can verify the claim using the public key embedded in the attestation. No shared secrets, no registry needed. Ed25519 signatures, deep-canonical JSON, 100% verification fidelity verified on 30 hand-built samples, three byte-identical runs."
   },
   "whyNow": {
-    "body": "When this project ships, this section explains what shifted in 2025-2026 that makes this newly possible or needed."
+    "body": "A2A and AGNTCY are crystallizing. Multi-agent frameworks are shipping. Trust is the missing primitive. The right moment to plant a vendor-neutral attestation format is now — before each framework ships its own incompatible version."
   },
   "cta": {
-    "headline": "Get notified when this ships.",
+    "headline": "Get notified when agent-reputation hits 1.0.",
     "secondary": {
       "label": "Get updates",
       "placeholder": "your@email.com"
     }
   },
   "about": {
-    "body": "Built by Aiden. This is an exploratory project — feedback welcome.",
-    "githubUrl": "https://github.com/Accuoa",
-    "contactUrl": "https://twitter.com/aidenbolin"
+    "body": "Built by Aiden — solo developer working through a portfolio of AI primitives in 2026. agent-reputation is one of several exploratory bets; see the hub for the others. This is alpha — expect rough edges, please file issues.",
+    "githubUrl": "https://github.com/Accuoa/agent-reputation",
+    "contactUrl": "https://twitter.com/AccuoaAgent"
   },
   "email": {
     "captureEndpoint": "https://api.aidenbolin.dev/signup",
     "projectId": "agent-reputation"
   },
   "footer": {
-    "license": "Apache-2.0"
+    "license": "MIT",
+    "rssUrl": "https://accuoa.github.io/rss.xml"
   }
 }
