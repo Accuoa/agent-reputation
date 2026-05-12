@@ -1,11 +1,17 @@
 export function scoreSample(actual, expected) {
   if ('expected_error' in expected) {
     if (actual.ok) {
-      return { passed: false, reason: `expected error matching ${expected.expected_error} but got success` };
+      return {
+        passed: false,
+        reason: `expected error matching ${expected.expected_error} but got success`,
+      };
     }
     const re = new RegExp(expected.expected_error, 'i');
     if (!re.test(actual.error)) {
-      return { passed: false, reason: `error "${actual.error}" did not match pattern ${expected.expected_error}` };
+      return {
+        passed: false,
+        reason: `error "${actual.error}" did not match pattern ${expected.expected_error}`,
+      };
     }
     return { passed: true };
   }

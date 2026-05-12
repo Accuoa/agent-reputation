@@ -30,11 +30,15 @@ describe('AttestationSchema', () => {
   });
 
   it('rejects empty attestor.id', () => {
-    expect(() => AttestationSchema.parse({ ...valid, attestor: { ...valid.attestor, id: '' } })).toThrow();
+    expect(() =>
+      AttestationSchema.parse({ ...valid, attestor: { ...valid.attestor, id: '' } }),
+    ).toThrow();
   });
 
   it('rejects empty attestor.public_key', () => {
-    expect(() => AttestationSchema.parse({ ...valid, attestor: { ...valid.attestor, public_key: '' } })).toThrow();
+    expect(() =>
+      AttestationSchema.parse({ ...valid, attestor: { ...valid.attestor, public_key: '' } }),
+    ).toThrow();
   });
 
   it('rejects empty subject.id', () => {
@@ -78,7 +82,11 @@ describe('AttestationSchema', () => {
   });
 
   it('accepts catchall fields on attestor and subject (forward-compat)', () => {
-    const ext = { ...valid, attestor: { ...valid.attestor, extra: 'x' }, subject: { id: valid.subject.id, extra: 'y' } };
+    const ext = {
+      ...valid,
+      attestor: { ...valid.attestor, extra: 'x' },
+      subject: { id: valid.subject.id, extra: 'y' },
+    };
     expect(() => AttestationSchema.parse(ext)).not.toThrow();
   });
 });

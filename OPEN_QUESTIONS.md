@@ -7,6 +7,7 @@ This document is intentionally honest about what's not yet settled.
 **Context.** (Why this is unresolved.)
 
 **Options.**
+
 - A: ...
 - B: ...
 

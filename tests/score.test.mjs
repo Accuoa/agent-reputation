@@ -13,7 +13,10 @@ describe('scoreSample', () => {
   });
 
   it('passes for malformed sample when error matches regex', () => {
-    expect(scoreSample({ ok: false, error: 'signature invalid' }, { expected_error: 'signature|verify' }).passed).toBe(true);
+    expect(
+      scoreSample({ ok: false, error: 'signature invalid' }, { expected_error: 'signature|verify' })
+        .passed,
+    ).toBe(true);
   });
 
   it('fails for malformed sample when actual succeeds', () => {
@@ -23,7 +26,10 @@ describe('scoreSample', () => {
   });
 
   it('fails for malformed sample when error regex does not match', () => {
-    const r = scoreSample({ ok: false, error: 'something else broke' }, { expected_error: 'signature' });
+    const r = scoreSample(
+      { ok: false, error: 'something else broke' },
+      { expected_error: 'signature' },
+    );
     expect(r.passed).toBe(false);
     expect(r.reason).toMatch(/did not match/i);
   });

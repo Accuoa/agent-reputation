@@ -28,7 +28,11 @@ function readLog() {
 describe('createAuditedFetch', () => {
   it('logs internal=true for localhost calls', async () => {
     const baseFetch = vi.fn().mockResolvedValue(new Response('ok', { status: 200 }));
-    const fetch = createAuditedFetch({ logPath, internalHosts: ['localhost', '127.0.0.1'], baseFetch });
+    const fetch = createAuditedFetch({
+      logPath,
+      internalHosts: ['localhost', '127.0.0.1'],
+      baseFetch,
+    });
     await fetch('http://localhost:8787/memories');
     const entries = readLog();
     expect(entries).toHaveLength(1);
@@ -80,7 +84,11 @@ describe('createAuditedFetch', () => {
   it('mkdir-p when log directory does not exist', async () => {
     const newLogPath = join(tmpDir, 'nested', 'dir', 'log.jsonl');
     const baseFetch = vi.fn().mockResolvedValue(new Response('ok', { status: 200 }));
-    const fetch = createAuditedFetch({ logPath: newLogPath, internalHosts: ['localhost'], baseFetch });
+    const fetch = createAuditedFetch({
+      logPath: newLogPath,
+      internalHosts: ['localhost'],
+      baseFetch,
+    });
     await fetch('http://localhost/x');
     expect(existsSync(newLogPath)).toBe(true);
   });

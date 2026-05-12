@@ -160,7 +160,9 @@ function commandVerify(args) {
     console.log(`OK — attestation verified (attestor: ${parsed.attestor.id})`);
     return 0;
   }
-  console.error('FAIL — attestation signature invalid (tampered data, wrong key, or bad signature)');
+  console.error(
+    'FAIL — attestation signature invalid (tampered data, wrong key, or bad signature)',
+  );
   return 1;
 }
 
