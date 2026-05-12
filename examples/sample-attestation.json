@@ -1,0 +1,16 @@
+{
+  "format": "agent-reputation-attestation",
+  "version": "0.1",
+  "attestor": {
+    "id": "did:web:example.com:agent:reviewer",
+    "public_key": "ECeerJdmG9+o6Y3lvcN8gg+IDHx7yrZrPXs29GNKOSE="
+  },
+  "subject": {
+    "id": "did:web:other.com:agent:summarizer"
+  },
+  "task_class": "summarization",
+  "outcome": "success",
+  "confidence": 0.9,
+  "issued_at": "2026-05-12T22:56:13.766Z",
+  "signature": "Dzv9P+AgPpM4EdvY52oZG0350JJErO6RCrNJJZKbOrpmdcPV5+JYNgXheRX9kFoWF5VemqIDrFWZ0Kd32w1KDg=="
+}
