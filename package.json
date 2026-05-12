@@ -1,0 +1,26 @@
+{
+  "name": "agent-reputation",
+  "version": "0.1.0",
+  "description": "Vendor-neutral attestation format for agent reputation. Ed25519-signed attestations any verifier can check without pre-shared secrets.",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "agent-reputation": "src/cli.mjs"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs",
+    "test": "vitest run",
+    "benchmark": "node benchmark/run.mjs",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.0",
+    "prettier": "^3.3.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
